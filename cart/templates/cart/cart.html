@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<section class="section-content padding-y bg">
+  <div class="container">
+    <!-- ============================ COMPONENT 1 ================================= -->
+
+    <div class="row">
+      <aside class="col-lg-9">
+        <div class="card">
+          <table class="table table-borderless table-shopping-cart">
+            <thead class="text-muted">
+              <tr class="small text-uppercase">
+                <th scope="col">Product</th>
+                <th scope="col" width="120">Price</th>
+                <th scope="col" width="120">Avaible</th>
+                <th scope="col" width="120"> Update Date</th>
+                <th scope="col" class="text-right" width="200"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in cart_items %}
+              <tr>
+                <td>
+                  <figure class="itemside align-items-center">
+                    <div class="aside">
+                      <img src="{{item.product.image.url}}" class="img-sm" />
+                    </div>
+                    <figcaption class="info">
+                      <a href="#" class="title text-dark"
+                        >{{item.product.product_name}}</a
+                      >
+                      <p class="text-muted small">
+                        Category : {{item.product.category.category_name}}
+                      </p>
+                    </figcaption>
+                  </figure>
+                </td>
+                
+                <td>
+                  <div class="price-wrap">
+                    <br>
+                    <br>
+                    <var class="price">{{item.product.price}}৳</var>
+                    
+                  </div>
+                  <!-- price-wrap .// -->
+                </td>
+
+                <td>
+                  <div class="price-wrap">
+                    <br>
+                    <br>
+                    <var class="price">{{item.product.is_available}}</var>
+                    
+                  </div>
+                  <!-- price-wrap .// -->
+                </td>
+
+                <td>
+                  <div class="price-wrap">
+                    <var class="price">{{item.product.modified_date}}</var>
+                    
+                  </div>
+                  <!-- price-wrap .// -->
+                </td>
+                
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <!-- card.// -->
+      </aside>
+      <!-- col.// -->
+      
+      <!-- col.// -->
+    </div>
+    <!-- row.// -->
+    <!-- ============================ COMPONENT 1 END .// ================================= -->
+  </div>
+  <!-- container .//  -->
+</section>  
+{% endblock  %}
+  
