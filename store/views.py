@@ -56,7 +56,6 @@ def store(request, category_slug=None):
         products = Product.objects.filter(is_available=True, category=category)
     else:
         products = Product.objects.filter(is_available=True)
-
     
     if sort == 'asc':
         products = products.order_by('price')

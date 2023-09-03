@@ -8,4 +8,4 @@ class UserReview(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'Review by {self.user.username}'
+        return f'The Name of reviewer: {self.user.username}'
