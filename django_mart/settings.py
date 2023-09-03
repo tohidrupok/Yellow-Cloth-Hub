@@ -124,13 +124,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 if not DEBUG:STATIC_ROOT = ''
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/'),
 ]
-
 
 
 # Default primary key field type
