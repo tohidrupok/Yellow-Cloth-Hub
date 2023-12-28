@@ -1,15 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body%}
-<section class="section-pagetop bg">
-<div class="container">
-	<h2 class="title-page">Yellow's online Store</h2>
-	
-</div> <!-- container //  -->
-</section>
-<!-- ========================= SECTION INTRO END// ========================= -->
 
-<!-- ========================= SECTION CONTENT ========================= -->
 <section class="section-content padding-y">
 <div class="container">
 
@@ -41,7 +33,94 @@
 			</div> <!-- card-body.// -->
 		</div>
 	</article> <!-- filter-group  .// -->
+
 	
+	<article class="filter-group">
+		<header class="card-header">
+			
+			<a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
+				<i class="icon-control fa fa-chevron-down"></i>
+				<h6 class="title">Brand</h6>
+			</a>
+		</header>
+		<div class="filter-content collapse show" id="collapse_1" style="">
+			<div class="card-body">
+				
+				<ul class="list-menu"> 
+					{% for i in categories %}
+				<li><a href="{% url 'products_by_category' category_slug=i.slug %}">{{i.category_name}}  </a></li>
+					{%endfor%}
+				</ul>
+
+			</div> <!-- card-body.// -->
+		</div>
+	</article> <!-- filter-group  .// --> 
+
+	<article class="filter-group">
+		<header class="card-header">
+			
+			<a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
+				<i class="icon-control fa fa-chevron-down"></i>
+				<h6 class="title">Seller</h6>
+			</a>
+		</header>
+		<div class="filter-content collapse show" id="collapse_1" style="">
+			<div class="card-body">
+				
+				<ul class="list-menu"> 
+					{% for i in categories %}
+				<li><a href="{% url 'products_by_category' category_slug=i.slug %}">{{i.category_name}}  </a></li>
+					{%endfor%}
+				</ul>
+
+			</div> <!-- card-body.// -->
+		</div>
+	</article> <!-- filter-group  .// --> 
+
+
+	<article class="filter-group">
+		<header class="card-header">
+			
+			<a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
+				<i class="icon-control fa fa-chevron-down"></i>
+				<h6 class="title">Product By</h6>
+			</a>
+		</header>
+		<div class="filter-content collapse show" id="collapse_1" style="">
+			<div class="card-body">
+				
+				<ul class="list-menu"> 
+					{% for i in categories %}
+				<li><a href="{% url 'products_by_category' category_slug=i.slug %}">{{i.category_name}}  </a></li>
+					{%endfor%}
+				</ul>
+
+			</div> <!-- card-body.// -->
+		</div>
+	</article> <!-- filter-group  .// --> 
+
+	<article class="filter-group">
+		<header class="card-header">
+			
+			<a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
+				<i class="icon-control fa fa-chevron-down"></i>
+				<h6 class="title">Warranty Period</h6>
+			</a>
+		</header>
+		<div class="filter-content collapse show" id="collapse_1" style="">
+			<div class="card-body">
+				
+				<ul class="list-menu"> 
+					{% for i in categories %}
+				<li><a href="{% url 'products_by_category' category_slug=i.slug %}">{{i.category_name}}  </a></li>
+					{%endfor%}
+				</ul>
+
+			</div> <!-- card-body.// -->
+		</div>
+	</article> <!-- filter-group  .// --> 
+
+
 </div> <!-- card.// -->
 
 	</aside> <!-- col.// -->
