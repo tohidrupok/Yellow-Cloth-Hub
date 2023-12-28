@@ -18,3 +18,4 @@ Product Details and Reviews:
 
 Wishlist and Recommendations:
 - Implement a wishlist feature for users to save items..
+# buy-now-project
